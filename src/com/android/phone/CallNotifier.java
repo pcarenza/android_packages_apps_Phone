@@ -27,6 +27,7 @@ import com.android.internal.telephony.Connection;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneBase;
 import com.android.internal.telephony.CallManager;
+import com.android.phone.CallFeaturesSetting;
 
 import android.app.ActivityManagerNative;
 import android.content.Context;
@@ -46,7 +47,6 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.EventLog;
 import android.util.Log;
-
 
 /**
  * Phone app module that listens for phone state changes and various other
@@ -1302,6 +1302,15 @@ public class CallNotifier extends Handler
             // *should* be blocked at the telephony layer on non-voice-capable
             // capable devices.)
             Log.w(LOG_TAG, "Got onMwiChanged() on non-voice-capable device! Ignoring...");
+            return;
+        }
+
+        boolean notifprop = mApplication.getResources().getBoolean(R.bool.enable_vmnotif_option);
+        boolean notifoption = Settings.System.getInt(mApplication.getPhone().getContext().getContentResolver(), CallFeaturesSetting.ENABLE_VOICEMAIL_NOTIFICATION, 0) == 1;
+        if (notifprop && !notifoption) {
+            // enable_vmnotif_option is true, and enable_voicemail_notification is unchecked or unset (false)
+            // ignore the mwi event, but log if we're debugging.
+            if (VDBG) log("onMwiChanged(): vmnotif is disabled. Ignoring...");
             return;
         }
 

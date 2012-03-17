@@ -218,6 +218,10 @@
     <string name="settings_label">Network settings</string>
     <!-- Call settings screen, setting option name -->
     <string name="voicemail">Voicemail</string>
+    <!-- Call settings screen, voicemail notification name -->
+    <string name="voicemail_notification_title">Voicemail Notifications</string>
+    <!-- Call settings screen, voicemail notification summary -->
+    <string name="voicemail_notification_summary">Display voicemail notifications</string>
     <!-- Call forwarding dialog box, voicemail number prefix -->
     <string name="voicemail_abbreviated">VM:</string>
     <!-- Mobile network settings screen, setting option name -->

@@ -112,4 +112,7 @@
 
     <!-- If true, removes the Voice Privacy option from Call Settings -->
     <bool name="config_voice_privacy_disable">false</bool>
+
+    <!-- If true, enables the voicemail notification option in Call Settings -->
+    <bool name="enable_vmnotif_option">false</bool>
 </resources>
