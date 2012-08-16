@@ -1481,4 +1481,7 @@
     <!-- Title for the category "ringtone", which is shown above ringote settings
          [CHAR LIMIT=40] -->
     <string name="preference_category_ringtone">Ringtone</string>
+
+    <string name="phone_number_label">My phone number</string>
+    <string name="phone_number_summary">Set the phone number for this device</string>
 </resources>
