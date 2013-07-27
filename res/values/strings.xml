@@ -366,19 +366,27 @@
     <string name="preferred_network_mode_cdma_only_summary">Preferred network mode: CDMA only</string>
     <!-- Mobile network settings, summary for preferred network mode EvDo only [CHAR LIMIT=100] -->
     <string name="preferred_network_mode_evdo_only_summary">Preferred network mode: EvDo only</string>
-    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA[CHAR LIMIT=100] -->
-    <string name="preferred_network_mode_lte_cdma_summary">Preferred network mode: LTE / CDMA</string>
-    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo [CHAR LIMIT=100] -->
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferred network mode: LTE / CDMA / EvDo</string>
-    <!-- Mobile network settings, summary for preferred network mode LTE / GSM/WCDMA [CHAR LIMIT=100] -->
-    <string name="preferred_network_mode_lte_gsm_summary">Preferred network mode: LTE / GSM/WCDMA</string>
-    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
-    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Preferred network mode: LTE / CDMA / EvDo / GSM/WCDMA</string>
-    <!-- Mobile network settings, summary for preferred network mode LTE / WCDMA [CHAR LIMIT=100] -->
+    <!-- Mobile network settings, summary for preferred network mode CDMA/EvDo/GSM/WCDMA[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_cdma_evdo_gsm_wcdma_summary">Preferred network mode: CDMA/EvDo/GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_summary">Preferred network mode: LTE </string>
+    <!-- Mobile network settings, summary for preferred network mode GSM/WCDMA/LTE [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_wcdma_summary">Preferred network mode: GSM/WCDMA/LTE</string>
+    <!-- Mobile network settings, summary for preferred network mode CDMA+LTE/EVDO[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferred network mode: CDMA+LTE/EVDO</string>
+    <!-- Mobile network settings, summary for preferred network mode Global[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_global_summary">Preferred network mode: Global</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / WCDMA[CHAR LIMIT=100] -->
     <string name="preferred_network_mode_lte_wcdma_summary">Preferred network mode: LTE / WCDMA</string>
 
+
     <string-array name="preferred_network_mode_choices">
+        <item>LTE / WCDMA</item>
+        <item>LTE</item>
         <item>Global</item>
+        <item>GSM/WCDMA/LTE</item>
+        <item>CDMA + LTE/EvDo</item>
+        <item>CDMA/EvDo/GSM/WCDMA</item>
         <item>EvDo only</item>
         <item>CDMA w/o EvDo</item>
         <item>CDMA/EvDo auto</item>
@@ -388,6 +396,11 @@
         <item>GSM/WCDMA preferred</item>
     </string-array>
     <string-array name="preferred_network_mode_values"  translatable="false">
+        <item>"12"</item>
+        <item>"11"</item>
+        <item>"10"</item>
+        <item>"9"</item>
+        <item>"8"</item>
         <item>"7"</item>
         <item>"6"</item>
         <item>"5"</item>
@@ -395,32 +408,6 @@
         <item>"3"</item>
         <item>"2"</item>
         <item>"1"</item>
-        <item>"0"</item>
-    </string-array>
-    <!-- Mobile network settings, network mode choices for a device supporting CDMA and LTE [CHAR LIMIT=25] -->
-    <string-array name="preferred_network_mode_choices_lte">
-    <!--<item>LTE only</item>-->
-        <item>LTE/CDMA/EvDo/GSM/WCDMA</item>
-        <item>LTE/CDMA/EvDo</item>
-        <item>LTE/CDMA</item>
-        <item>CDMA/EvDo auto</item>
-    </string-array>
-    <string-array name="preferred_network_mode_values_lte" translatable="false">
-    <!--<item>"11"</item>-->
-        <item>"10"</item>
-        <item>"8"</item>
-        <item>"7"</item>
-        <item>"4"</item>
-    </string-array>
-    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
-    <string-array name="preferred_network_mode_choices_lte_gsm">
-        <item>LTE/WCDMA</item>
-        <item>LTE/GSM/WCDMA</item>
-        <item>GSM/WCDMA preferred</item>
-    </string-array>
-    <string-array name="preferred_network_mode_values_lte_gsm" translatable="false">
-        <item>"12"</item>
-        <item>"9"</item>
         <item>"0"</item>
     </string-array>
     <!-- Mobile network settings screen, data enabling checkbox name -->
@@ -1340,7 +1327,7 @@
     <!-- Canned response for the "Respond via SMS" feature for incoming calls. [CHAR LIMIT=35] -->
     <string name="respond_via_sms_canned_response_4">Can\'t talk now. Call me later?</string>
     <!-- "Respond via SMS" option that lets you compose a custom response. [CHAR LIMIT=30] -->
-    <string name="respond_via_sms_custom_message">Custom message</string>
+    <string name="respond_via_sms_custom_message">Write your own...</string>
 
     <!-- Title of settings screen for managing the "Respond via SMS" feature. [CHAR LIMIT=30] -->
     <string name="respond_via_sms_setting_title">Quick responses</string>
@@ -1351,6 +1338,9 @@
     <string name="respond_via_sms_setting_summary"></string>
     <!-- Dialog title when changing a string for the "Respond via SMS" feature. [CHAR LIMIT=30] -->
     <string name="respond_via_sms_edittext_dialog_title">Quick response</string>
+    <!-- Menu option in  "Respond via SMS" that allows user to reset the default
+         activity used to handle "Respond via SMS" [CHAR LIMIT=30] -->
+    <string name="respond_via_sms_menu_reset_default_activity">Reset default app</string>
 
     <!-- "Respond via SMS": Confirmation message shown after sending
          a text response. [CHAR LIMIT=40] -->
@@ -1528,22 +1518,13 @@
          [CHAR LIMIT=40] -->
     <string name="dtmf_tone_enable_title">Dial pad touch tones</string>
 
-    <!-- Mobile network settings screen, setting check box name -->
-    <string name="national_roaming">National data roaming</string>
-    <!-- Mobile network settings screen, setting summary text when check box is selected -->
-    <string name="national_roaming_enable">Connect to data services when nationally roaming</string>
-    <!-- Mobile network settings screen, setting summary text when check box is clear -->
-    <string name="national_roaming_disable">Connect to data services when nationally roaming</string>
+    <!--  Setting option name to enable or disable dialpad autocomplete functionality
+         [CHAR LIMIT=40] -->
+    <string name="dial_pad_autocomplete">Dial pad autocomplete</string>
 
-    <!-- Permission for notification-bar network toggle -->
-    <string name="perm_change_mobile_network">Change network (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Application with this permission can, at any time, change between 2G data and 3G data. 3G is faster, consumes more battery, and can also cost you more money.</string>
-
-    <!-- Noise suppression -->
-    <string name="noise_suppression_title">Noise suppression</string>
-    <string name="noise_suppression_summary">Enable noise suppression for calls</string>
-    <!-- End Noise suppression -->
-
+    <!-- Title for the category "ringtone", which is shown above ringtone and vibration
+         related settings.
+         [CHAR LIMIT=40] -->
     <string name="preference_category_ringtone">Ringtone &amp; Vibrate</string>
 
     <!-- Voice quality filter -->
